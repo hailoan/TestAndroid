@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_corner_20"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvCreateNewToDoDlgTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/somatic_round"
+        android:text="Create ToDo"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtCreateNewToDoDlgTitle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/fredoka_regular"
+        android:hint="@string/title"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCreateNewToDoDlgTitle" />
+
+    <EditText
+        android:id="@+id/edtCreateNewToDoDlgDesc"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/fredoka_regular"
+        android:hint="@string/description"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtCreateNewToDoDlgTitle" />
+
+    <TextView
+        android:id="@+id/tvCreateNewToDoDltTime"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/fredoka_regular"
+        android:gravity="center_vertical"
+        android:text="@string/time"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtCreateNewToDoDlgDesc" />
+
+    <TextView
+        android:id="@+id/tvCreateNewToDoDlgStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/stroke_gray_corner_8"
+        android:hint="dd/mm/yyyy"
+        android:paddingStart="6dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvCreateNewToDoDltTime"
+        app:layout_constraintEnd_toStartOf="@id/tvCreateNewToDoDlgLine"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tvCreateNewToDoDltTime"
+        app:layout_constraintTop_toTopOf="@id/tvCreateNewToDoDltTime" />
+
+    <View
+        android:id="@+id/tvCreateNewToDoDlgLine"
+        android:layout_width="10dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="10dp"
+        android:background="#D1D1D1"
+        app:layout_constraintBottom_toBottomOf="@id/tvCreateNewToDoDltTime"
+        app:layout_constraintEnd_toStartOf="@id/tvCreateNewToDoDlgFinish"
+        app:layout_constraintStart_toEndOf="@id/tvCreateNewToDoDlgStart"
+        app:layout_constraintTop_toTopOf="@id/tvCreateNewToDoDltTime" />
+
+
+    <TextView
+        android:id="@+id/tvCreateNewToDoDlgFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/stroke_gray_corner_8"
+        android:hint="dd/mm/yyyy"
+        android:paddingStart="6dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvCreateNewToDoDltTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCreateNewToDoDlgLine"
+        app:layout_constraintTop_toTopOf="@id/tvCreateNewToDoDltTime" />
+
+    <TextView
+        android:id="@+id/tvCreateNewToDoDlgCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_gray_corner_8"
+        android:fontFamily="@font/somatic_round"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/tvCreateNewToDoDlgCreate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCreateNewToDoDltTime" />
+
+    <TextView
+        android:id="@+id/tvCreateNewToDoDlgCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_green_corner_8"
+        android:fontFamily="@font/somatic_round"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Create"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/tvCreateNewToDoDlgCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvCreateNewToDoDlgCancel"
+        app:layout_constraintTop_toTopOf="@id/tvCreateNewToDoDlgCancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

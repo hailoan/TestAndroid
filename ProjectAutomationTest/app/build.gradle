@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+
+}
+
+android {
+    namespace 'com.livewallpaper.video.projectautomationtest'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.livewallpaper.video.projectautomationtest"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testApplicationId = "com.livewallpaper.video.projectautomationtest.test"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testHandleProfiling = true
+        testFunctionalTest = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    testOptions {
+        reportDir "$rootDir/test-reports"
+        resultsDir "$rootDir/test-results"
+        unitTests {
+            returnDefaultValues true
+
+            all {
+                jvmArgs '-XX:MaxPermSize=256m'
+
+                if (it.name == 'testDebugUnitTest') {
+                    systemProperty 'debug', 'true'
+                }
+            }
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.test:core-ktx:1.5.0'
+    implementation 'androidx.test.ext:junit-ktx:1.1.5'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    // Required -- JUnit 4 framework
+    testImplementation "junit:junit:4.13.2"
+    // Optional -- Mockito framework
+    testImplementation "org.mockito:mockito-core:4.8.1"
+    // Optional -- mockito-kotlin
+    testImplementation "org.mockito.kotlin:mockito-kotlin:4.1.0"
+    // Optional -- Mockk framework
+    testImplementation "io.mockk:mockk:1.4.1"
+
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation('androidx.test.uiautomator:uiautomator:2.2.0')
+    androidTestImplementation('androidx.test:runner:1.5.2')
+
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
+}

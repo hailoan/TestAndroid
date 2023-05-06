@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.livewallpaper.video.projectautomationtest.ExampleInstrumentedTest" tests="1" failures="1" errors="0" skipped="0" time="10.041" timestamp="2023-01-04T15:14:20" hostname="localhost">
+  <properties>
+    <property name="device" value="Pixel_XL_API_30(AVD) - 11" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="loginWifi" classname="com.livewallpaper.video.projectautomationtest.ExampleInstrumentedTest" time="9.382">
+    <failure>java.lang.SecurityException: Permission Denial: package=com.livewallpaper.video.projectautomationtest.test does not belong to uid=10180
+at android.os.Parcel.createExceptionOrNull(Parcel.java:2373)
+at android.os.Parcel.createException(Parcel.java:2357)
+at android.os.Parcel.readException(Parcel.java:2340)
+at android.os.Parcel.readException(Parcel.java:2282)
+at android.app.IActivityTaskManager$Stub$Proxy.startActivity(IActivityTaskManager.java:3696)
+at android.app.Instrumentation.execStartActivity(Instrumentation.java:1723)
+at androidx.test.runner.MonitoringInstrumentation.execStartActivity(MonitoringInstrumentation.java:605)
+at android.app.ContextImpl.startActivity(ContextImpl.java:1023)
+at android.app.ContextImpl.startActivity(ContextImpl.java:994)
+at com.livewallpaper.video.projectautomationtest.ExampleInstrumentedTest.loginWifi(ExampleInstrumentedTest.kt:137)
+... 34 trimmed
+Caused by: android.os.RemoteException: Remote stack trace:
+at com.android.server.wm.ActivityTaskManagerService.assertPackageMatchesCallingUid(ActivityTaskManagerService.java:2598)
+at com.android.server.wm.ActivityTaskManagerService.startActivityAsUser(ActivityTaskManagerService.java:1081)
+at com.android.server.wm.ActivityTaskManagerService.startActivityAsUser(ActivityTaskManagerService.java:1072)
+at com.android.server.wm.ActivityTaskManagerService.startActivity(ActivityTaskManagerService.java:1047)
+at android.app.IActivityTaskManager$Stub.onTransact(IActivityTaskManager.java:1422)</failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_corner_20"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvSatusToDoDlgTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/somatic_round"
+        android:text="Update Status"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStatusToDoDlgTodo"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/fredoka_regular"
+        android:gravity="center"
+        android:hint="TODO"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSatusToDoDlgTitle" />
+
+    <TextView
+        android:id="@+id/tvStatusToDoDlgProgress"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/fredoka_regular"
+        android:gravity="center"
+        android:hint="IN PROGRESS"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusToDoDlgTodo" />
+
+
+    <TextView
+        android:id="@+id/tvStatusToDoDlgDone"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/fredoka_regular"
+        android:gravity="center"
+        android:hint="DONE"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusToDoDlgProgress" />
+
+
+    <TextView
+        android:id="@+id/tvStatusToDoDlgCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_gray_corner_8"
+        android:fontFamily="@font/somatic_round"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/tvStatusToDoDlgUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusToDoDlgDone" />
+
+    <TextView
+        android:id="@+id/tvStatusToDoDlgUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_green_corner_8"
+        android:fontFamily="@font/somatic_round"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Update"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/tvStatusToDoDlgCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvStatusToDoDlgCancel"
+        app:layout_constraintTop_toTopOf="@id/tvStatusToDoDlgCancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

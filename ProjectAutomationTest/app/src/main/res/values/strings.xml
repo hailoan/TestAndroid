@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Project Automation Test</string>
+    <string name="start_record">Start Record</string>
+    <string name="stop_record">Stop Record</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="time">Time:</string>
+    <string name="todo_list">ToDo List</string>
+</resources>

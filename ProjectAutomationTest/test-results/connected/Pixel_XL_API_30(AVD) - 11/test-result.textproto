@@ -1,0 +1,73 @@
+# 2023-01-04T15:14:20.176Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 1
+}
+test_status: FAILED
+test_result {
+  test_case {
+    test_class: "ExampleInstrumentedTest"
+    test_package: "com.livewallpaper.video.projectautomationtest"
+    test_method: "loginWifi"
+    start_time {
+      seconds: 1672845250
+      nanos: 88000000
+    }
+    end_time {
+      seconds: 1672845259
+      nanos: 479000000
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.SecurityException: Permission Denial: package=com.livewallpaper.video.projectautomationtest.test does not belong to uid=10180\nat android.os.Parcel.createExceptionOrNull(Parcel.java:2373)\nat android.os.Parcel.createException(Parcel.java:2357)\nat android.os.Parcel.readException(Parcel.java:2340)\nat android.os.Parcel.readException(Parcel.java:2282)\nat android.app.IActivityTaskManager$Stub$Proxy.startActivity(IActivityTaskManager.java:3696)\nat android.app.Instrumentation.execStartActivity(Instrumentation.java:1723)\nat androidx.test.runner.MonitoringInstrumentation.execStartActivity(MonitoringInstrumentation.java:605)\nat android.app.ContextImpl.startActivity(ContextImpl.java:1023)\nat android.app.ContextImpl.startActivity(ContextImpl.java:994)\nat com.livewallpaper.video.projectautomationtest.ExampleInstrumentedTest.loginWifi(ExampleInstrumentedTest.kt:137)\n... 34 trimmed\nCaused by: android.os.RemoteException: Remote stack trace:\nat com.android.server.wm.ActivityTaskManagerService.assertPackageMatchesCallingUid(ActivityTaskManagerService.java:2598)\nat com.android.server.wm.ActivityTaskManagerService.startActivityAsUser(ActivityTaskManagerService.java:1081)\nat com.android.server.wm.ActivityTaskManagerService.startActivityAsUser(ActivityTaskManagerService.java:1072)\nat com.android.server.wm.ActivityTaskManagerService.startActivity(ActivityTaskManagerService.java:1047)\nat android.app.IActivityTaskManager$Stub.onTransact(IActivityTaskManager.java:1422)"
+    error_type: "android.os.RemoteException"
+    stack_trace: "java.lang.SecurityException: Permission Denial: package=com.livewallpaper.video.projectautomationtest.test does not belong to uid=10180\nat android.os.Parcel.createExceptionOrNull(Parcel.java:2373)\nat android.os.Parcel.createException(Parcel.java:2357)\nat android.os.Parcel.readException(Parcel.java:2340)\nat android.os.Parcel.readException(Parcel.java:2282)\nat android.app.IActivityTaskManager$Stub$Proxy.startActivity(IActivityTaskManager.java:3696)\nat android.app.Instrumentation.execStartActivity(Instrumentation.java:1723)\nat androidx.test.runner.MonitoringInstrumentation.execStartActivity(MonitoringInstrumentation.java:605)\nat android.app.ContextImpl.startActivity(ContextImpl.java:1023)\nat android.app.ContextImpl.startActivity(ContextImpl.java:994)\nat com.livewallpaper.video.projectautomationtest.ExampleInstrumentedTest.loginWifi(ExampleInstrumentedTest.kt:137)\n... 34 trimmed\nCaused by: android.os.RemoteException: Remote stack trace:\nat com.android.server.wm.ActivityTaskManagerService.assertPackageMatchesCallingUid(ActivityTaskManagerService.java:2598)\nat com.android.server.wm.ActivityTaskManagerService.startActivityAsUser(ActivityTaskManagerService.java:1081)\nat com.android.server.wm.ActivityTaskManagerService.startActivityAsUser(ActivityTaskManagerService.java:1072)\nat com.android.server.wm.ActivityTaskManagerService.startActivity(ActivityTaskManagerService.java:1047)\nat android.app.IActivityTaskManager$Stub.onTransact(IActivityTaskManager.java:1422)"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/loannth5/code/ProjectAutomationTest/test-results/connected/Pixel_XL_API_30(AVD) - 11/logcat-com.livewallpaper.video.projectautomationtest.ExampleInstrumentedTest-loginWifi.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/loannth5/code/ProjectAutomationTest/test-results/connected/Pixel_XL_API_30(AVD) - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/loannth5/code/ProjectAutomationTest/test-results/connected/Pixel_XL_API_30(AVD) - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/Users/loannth5/code/ProjectAutomationTest/test-results/connected/Pixel_XL_API_30(AVD) - 11/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/Users/loannth5/code/ProjectAutomationTest/test-results/connected/Pixel_XL_API_30(AVD) - 11/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

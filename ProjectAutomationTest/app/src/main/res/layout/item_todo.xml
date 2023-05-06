@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvToDoItmTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/somatic_round"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="day som luc 10 gio" />
+
+    <TextView
+        android:id="@+id/tvToDoItmDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/fredoka_regular"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvToDoItmTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvToDoItmTitle"
+        tools:text="plan thang 1 tuan 9" />
+
+    <TextView
+        android:id="@+id/tvToDoItmTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tvToDoItmTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvToDoItmDesc"
+        tools:text="Time: 10/10/2020 to 12/10/2022" />
+
+    <TextView
+        android:id="@+id/tvToDoItmStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#4CAF50"
+        android:fontFamily="@font/somatic_round"
+        android:paddingStart="4dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@id/tvToDoItmTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvToDoItmTime"
+        tools:text="#Done" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="#D5D5D5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvToDoItmStatus" />
+</androidx.constraintlayout.widget.ConstraintLayout>
